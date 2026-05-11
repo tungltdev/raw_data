@@ -1,0 +1,1136 @@
+[
+  {
+      "id": 1,
+      "priority": 1,
+      "condition": {
+          "initiatorDomains": [
+              "127.0.0.1",
+              "tmeta.vn"
+          ],
+          "resourceTypes": [
+              "xmlhttprequest"
+          ],
+          "regexFilter": "business\\.facebook\\.com"
+      },
+      "action": {
+          "type": "modifyHeaders",
+          "requestHeaders": [
+              {
+                  "header": "Origin",
+                  "operation": "set",
+                  "value": "https://business.facebook.com"
+              },
+              {
+                  "header": "Referer",
+                  "operation": "set",
+                  "value": "https://business.facebook.com"
+              },
+              {
+                  "header": "Tmetar-1-1",
+                  "operation": "set",
+                  "value": "business\\.facebook\\.com"
+              }
+          ]
+      }
+  },
+  {
+      "id": 2,
+      "priority": 1,
+      "condition": {
+          "initiatorDomains": [
+              "127.0.0.1",
+              "tmeta.vn"
+          ],
+          "resourceTypes": [
+              "xmlhttprequest"
+          ],
+          "urlFilter": "m.facebook.com"
+      },
+      "action": {
+          "type": "modifyHeaders",
+          "requestHeaders": [
+              {
+                  "header": "Origin",
+                  "operation": "set",
+                  "value": "https://m.facebook.com"
+              },
+              {
+                  "header": "Referer",
+                  "operation": "set",
+                  "value": "https://m.facebook.com"
+              },
+              {
+                  "header": "Tmetar-1-2",
+                  "operation": "set",
+                  "value": "m.facebook.com"
+              }
+          ]
+      }
+  },
+  {
+      "id": 3,
+      "priority": 1,
+      "condition": {
+          "initiatorDomains": [
+              "127.0.0.1",
+              "tmeta.vn"
+          ],
+          "resourceTypes": [
+              "xmlhttprequest"
+          ],
+          "regexFilter": "^https://(\\w+\\.)?(facebook)\\.com/"
+      },
+      "action": {
+          "type": "modifyHeaders",
+          "requestHeaders": [
+              {
+                  "header": "Sec-Fetch-Dest",
+                  "operation": "set",
+                  "value": "document"
+              },
+              {
+                  "header": "Sec-Fetch-Mode",
+                  "operation": "set",
+                  "value": "navigate"
+              },
+              {
+                  "header": "Sec-Fetch-Site",
+                  "operation": "set",
+                  "value": "same-origin"
+              },
+              {
+                  "header": "Tmetar-1-3",
+                  "operation": "set",
+                  "value": "^https://(\\w+\\.)?(facebook)\\.com/"
+              }
+          ]
+      }
+  },
+  {
+      "id": 4,
+      "priority": 1,
+      "condition": {
+          "initiatorDomains": [
+              "127.0.0.1",
+              "tmeta.vn"
+          ],
+          "resourceTypes": [
+              "xmlhttprequest"
+          ],
+          "urlFilter": "facebook.com"
+      },
+      "action": {
+          "type": "modifyHeaders",
+          "requestHeaders": [
+              {
+                  "header": "Tmetar-1-4",
+                  "operation": "set",
+                  "value": "facebook.com"
+              }
+          ],
+          "responseHeaders": [
+              {
+                  "header": "Access-Control-Allow-Methods",
+                  "operation": "set",
+                  "value": "*"
+              },
+              {
+                  "header": "Access-Control-Allow-Credentials",
+                  "operation": "set",
+                  "value": "true"
+              },
+              {
+                  "header": "Access-Control-Expose-Headers",
+                  "operation": "set",
+                  "value": "*"
+              }
+          ]
+      }
+  },
+  {
+      "id": 5,
+      "priority": 1,
+      "condition": {
+          "initiatorDomains": [
+              "127.0.0.1",
+              "tmeta.vn"
+          ],
+          "resourceTypes": [
+              "xmlhttprequest"
+          ],
+          "urlFilter": "www.facebook.com"
+      },
+      "action": {
+          "type": "modifyHeaders",
+          "requestHeaders": [
+              {
+                  "header": "Origin",
+                  "operation": "set",
+                  "value": "https://www.facebook.com"
+              },
+              {
+                  "header": "Referer",
+                  "operation": "set",
+                  "value": "https://www.facebook.com"
+              },
+              {
+                  "header": "Tmetar-1-5",
+                  "operation": "set",
+                  "value": "www.facebook.com"
+              }
+          ]
+      }
+  },
+  {
+      "id": 6,
+      "priority": 1,
+      "condition": {
+          "initiatorDomains": [
+              "127.0.0.1",
+              "tmeta.vn"
+          ],
+          "resourceTypes": [
+              "xmlhttprequest"
+          ],
+          "urlFilter": "web.facebook.com"
+      },
+      "action": {
+          "type": "modifyHeaders",
+          "requestHeaders": [
+              {
+                  "header": "Origin",
+                  "operation": "set",
+                  "value": "https://web.facebook.com"
+              },
+              {
+                  "header": "Referer",
+                  "operation": "set",
+                  "value": "https://web.facebook.com"
+              },
+              {
+                  "header": "Tmetar-1-6",
+                  "operation": "set",
+                  "value": "web.facebook.com"
+              }
+          ]
+      }
+  },
+  {
+      "id": 7,
+      "priority": 1,
+      "condition": {
+          "initiatorDomains": [
+              "127.0.0.1",
+              "tmeta.vn"
+          ],
+          "resourceTypes": [
+              "xmlhttprequest"
+          ],
+          "urlFilter": "mobile.facebook.com"
+      },
+      "action": {
+          "type": "modifyHeaders",
+          "requestHeaders": [
+              {
+                  "header": "Origin",
+                  "operation": "set",
+                  "value": "https://mobile.facebook.com"
+              },
+              {
+                  "header": "Referer",
+                  "operation": "set",
+                  "value": "https://mobile.facebook.com"
+              },
+              {
+                  "header": "Tmetar-1-7",
+                  "operation": "set",
+                  "value": "mobile.facebook.com"
+              }
+          ]
+      }
+  },
+  {
+      "id": 8,
+      "priority": 1,
+      "condition": {
+          "initiatorDomains": [
+              "127.0.0.1",
+              "tmeta.vn"
+          ],
+          "resourceTypes": [
+              "xmlhttprequest"
+          ],
+          "urlFilter": "mbasic.facebook.com"
+      },
+      "action": {
+          "type": "modifyHeaders",
+          "requestHeaders": [
+              {
+                  "header": "Origin",
+                  "operation": "set",
+                  "value": "https://mbasic.facebook.com"
+              },
+              {
+                  "header": "Referer",
+                  "operation": "set",
+                  "value": "https://mbasic.facebook.com"
+              },
+              {
+                  "header": "Tmetar-1-8",
+                  "operation": "set",
+                  "value": "mbasic.facebook.com"
+              }
+          ]
+      }
+  },
+  {
+      "id": 10,
+      "priority": 1,
+      "condition": {
+          "initiatorDomains": [
+              "127.0.0.1",
+              "tmeta.vn"
+          ],
+          "resourceTypes": [
+              "xmlhttprequest"
+          ],
+          "regexFilter": "upload-business\\.facebook\\.com"
+      },
+      "action": {
+          "type": "modifyHeaders",
+          "requestHeaders": [
+              {
+                  "header": "Origin",
+                  "operation": "set",
+                  "value": "https://business.facebook.com"
+              },
+              {
+                  "header": "Referer",
+                  "operation": "set",
+                  "value": "https://business.facebook.com"
+              },
+              {
+                  "header": "Sec-Fetch-Site",
+                  "operation": "set",
+                  "value": "same-site"
+              },
+              {
+                  "header": "Tmetar-1-10",
+                  "operation": "set",
+                  "value": "upload-business\\.facebook\\.com"
+              }
+          ]
+      }
+  },
+  {
+      "id": 11,
+      "priority": 1,
+      "condition": {
+          "initiatorDomains": [
+              "127.0.0.1",
+              "tmeta.vn"
+          ],
+          "resourceTypes": [
+              "xmlhttprequest"
+          ],
+          "regexFilter": "en-gb\\.facebook\\.com"
+      },
+      "action": {
+          "type": "modifyHeaders",
+          "requestHeaders": [
+              {
+                  "header": "Origin",
+                  "operation": "set",
+                  "value": "https://en-gb.facebook.com"
+              },
+              {
+                  "header": "Referer",
+                  "operation": "set",
+                  "value": "https://en-gb.facebook.com"
+              },
+              {
+                  "header": "Sec-Fetch-Dest",
+                  "operation": "set",
+                  "value": "document"
+              },
+              {
+                  "header": "Sec-Fetch-Mode",
+                  "operation": "set",
+                  "value": "navigate"
+              },
+              {
+                  "header": "Tmetar-1-11",
+                  "operation": "set",
+                  "value": "en-gb\\.facebook\\.com"
+              }
+          ]
+      }
+  },
+  {
+      "id": 12,
+      "priority": 1,
+      "condition": {
+          "initiatorDomains": [
+              "127.0.0.1",
+              "tmeta.vn"
+          ],
+          "resourceTypes": [
+              "xmlhttprequest"
+          ],
+          "urlFilter": "adsmanager.facebook.com"
+      },
+      "action": {
+          "type": "modifyHeaders",
+          "requestHeaders": [
+              {
+                  "header": "Origin",
+                  "operation": "set",
+                  "value": "https://adsmanager.facebook.com"
+              },
+              {
+                  "header": "Referer",
+                  "operation": "set",
+                  "value": "https://adsmanager.facebook.com"
+              },
+              {
+                  "header": "Tmetar-1-12",
+                  "operation": "set",
+                  "value": "adsmanager.facebook.com"
+              }
+          ]
+      }
+  },
+  {
+      "id": 13,
+      "priority": 1,
+      "condition": {
+          "initiatorDomains": [
+              "127.0.0.1",
+              "tmeta.vn"
+          ],
+          "resourceTypes": [
+              "xmlhttprequest"
+          ],
+          "urlFilter": "upload.facebook.com"
+      },
+      "action": {
+          "type": "modifyHeaders",
+          "requestHeaders": [
+              {
+                  "header": "Origin",
+                  "operation": "set",
+                  "value": "https://upload.facebook.com"
+              },
+              {
+                  "header": "Referer",
+                  "operation": "set",
+                  "value": "https://upload.facebook.com"
+              },
+              {
+                  "header": "Tmetar-1-13",
+                  "operation": "set",
+                  "value": "upload.facebook.com"
+              }
+          ]
+      }
+  },
+  {
+      "id": 14,
+      "priority": 1,
+      "condition": {
+          "initiatorDomains": [
+              "127.0.0.1",
+              "tmeta.vn"
+          ],
+          "resourceTypes": [
+              "xmlhttprequest"
+          ],
+          "urlFilter": "free.facebook.com"
+      },
+      "action": {
+          "type": "modifyHeaders",
+          "requestHeaders": [
+              {
+                  "header": "Origin",
+                  "operation": "set",
+                  "value": "https://free.facebook.com"
+              },
+              {
+                  "header": "Referer",
+                  "operation": "set",
+                  "value": "https://free.facebook.com"
+              },
+              {
+                  "header": "Tmetar-1-14",
+                  "operation": "set",
+                  "value": "free.facebook.com"
+              }
+          ]
+      }
+  },
+  {
+      "id": 15,
+      "priority": 1,
+      "condition": {
+          "initiatorDomains": [
+              "127.0.0.1",
+              "tmeta.vn"
+          ],
+          "resourceTypes": [
+              "xmlhttprequest"
+          ],
+          "urlFilter": "business.secure.facebook.com"
+      },
+      "action": {
+          "type": "modifyHeaders",
+          "requestHeaders": [
+              {
+                  "header": "Origin",
+                  "operation": "set",
+                  "value": "https://business.facebook.com"
+              },
+              {
+                  "header": "Referer",
+                  "operation": "set",
+                  "value": "https://business.facebook.com"
+              },
+              {
+                  "header": "Tmetar-1-15",
+                  "operation": "set",
+                  "value": "business.secure.facebook.com"
+              }
+          ]
+      }
+  },
+  {
+      "id": 16,
+      "priority": 1,
+      "condition": {
+          "initiatorDomains": [
+              "127.0.0.1",
+              "tmeta.vn"
+          ],
+          "resourceTypes": [
+              "xmlhttprequest"
+          ],
+          "urlFilter": "graph.facebook.com"
+      },
+      "action": {
+          "type": "modifyHeaders",
+          "requestHeaders": [
+              {
+                  "header": "Origin",
+                  "operation": "set",
+                  "value": "https://graph.facebook.com"
+              },
+              {
+                  "header": "Referer",
+                  "operation": "set",
+                  "value": "https://graph.facebook.com"
+              },
+              {
+                  "header": "Tmetar-1-16",
+                  "operation": "set",
+                  "value": "graph.facebook.com"
+              }
+          ]
+      }
+  },
+  {
+      "id": 17,
+      "priority": 1,
+      "condition": {
+          "initiatorDomains": [
+              "127.0.0.1",
+              "tmeta.vn"
+          ],
+          "resourceTypes": [
+              "xmlhttprequest"
+          ],
+          "urlFilter": "adsmanager-graph.facebook.com"
+      },
+      "action": {
+          "type": "modifyHeaders",
+          "requestHeaders": [
+              {
+                  "header": "Origin",
+                  "operation": "set",
+                  "value": "https://adsmanager-graph.facebook.com"
+              },
+              {
+                  "header": "Referer",
+                  "operation": "set",
+                  "value": "https://adsmanager-graph.facebook.com"
+              },
+              {
+                  "header": "Tmetar-1-17",
+                  "operation": "set",
+                  "value": "adsmanager-graph.facebook.com"
+              }
+          ]
+      }
+  },
+  {
+      "id": 100,
+      "priority": 1,
+      "condition": {
+          "initiatorDomains": [
+              "127.0.0.1",
+              "tmeta.vn"
+          ],
+          "resourceTypes": [
+              "xmlhttprequest"
+          ],
+          "regexFilter": "tmetas_org_rq_busp1"
+      },
+      "action": {
+          "type": "modifyHeaders",
+          "requestHeaders": [
+              {
+                  "header": "Origin",
+                  "operation": "set",
+                  "value": "https://business.facebook.com"
+              },
+              {
+                  "header": "Referer",
+                  "operation": "set",
+                  "value": "https://business.facebook.com"
+              },
+              {
+                  "header": "Tmetar-1-100",
+                  "operation": "set",
+                  "value": "tmetas_org_rq_busp1"
+              }
+          ]
+      }
+  },
+  {
+      "id": 101,
+      "priority": 1,
+      "condition": {
+          "initiatorDomains": [
+              "127.0.0.1",
+              "tmeta.vn"
+          ],
+          "resourceTypes": [
+              "xmlhttprequest"
+          ],
+          "regexFilter": "tmetas_org_rq_wwwp1"
+      },
+      "action": {
+          "type": "modifyHeaders",
+          "requestHeaders": [
+              {
+                  "header": "Origin",
+                  "operation": "set",
+                  "value": "https://wwww.facebook.com"
+              },
+              {
+                  "header": "Referer",
+                  "operation": "set",
+                  "value": "https://wwww.facebook.com"
+              },
+              {
+                  "header": "Tmetar-1-101",
+                  "operation": "set",
+                  "value": "tmetas_org_rq_wwwp1"
+              }
+          ]
+      }
+  },
+  {
+      "id": 102,
+      "priority": 1,
+      "condition": {
+          "initiatorDomains": [
+              "127.0.0.1",
+              "tmeta.vn"
+          ],
+          "resourceTypes": [
+              "xmlhttprequest"
+          ],
+          "regexFilter": "tmetas_org_rq_mp1"
+      },
+      "action": {
+          "type": "modifyHeaders",
+          "requestHeaders": [
+              {
+                  "header": "Origin",
+                  "operation": "set",
+                  "value": "https://m.facebook.com"
+              },
+              {
+                  "header": "Referer",
+                  "operation": "set",
+                  "value": "https://m.facebook.com"
+              },
+              {
+                  "header": "Tmetar-1-102",
+                  "operation": "set",
+                  "value": "tmetas_org_rq_mp1"
+              }
+          ]
+      }
+  },
+  {
+      "id": 103,
+      "priority": 1,
+      "condition": {
+          "initiatorDomains": [
+              "127.0.0.1",
+              "tmeta.vn"
+          ],
+          "resourceTypes": [
+              "xmlhttprequest"
+          ],
+          "regexFilter": "tmetas_org_rq_graphp1"
+      },
+      "action": {
+          "type": "modifyHeaders",
+          "requestHeaders": [
+              {
+                  "header": "Origin",
+                  "operation": "set",
+                  "value": "https://graph.facebook.com"
+              },
+              {
+                  "header": "Referer",
+                  "operation": "set",
+                  "value": "https://graph.facebook.com"
+              },
+              {
+                  "header": "Tmetar-1-103",
+                  "operation": "set",
+                  "value": "tmetas_org_rq_graphp1"
+              }
+          ]
+      }
+  },
+  {
+      "id": 104,
+      "priority": 2,
+      "condition": {
+          "initiatorDomains": [
+              "127.0.0.1",
+              "tmeta.vn"
+          ],
+          "resourceTypes": [
+              "xmlhttprequest"
+          ],
+          "regexFilter": "tmetas_org_rq_busp2_path_latest"
+      },
+      "action": {
+          "type": "modifyHeaders",
+          "requestHeaders": [
+              {
+                  "header": "Referer",
+                  "operation": "set",
+                  "value": "https://business.facebook.com/latest"
+              },
+              {
+                  "header": "Tmetar-2-104",
+                  "operation": "set",
+                  "value": "tmetas_org_rq_busp2_path_latest"
+              }
+          ]
+      }
+  },
+  {
+      "id": 200,
+      "priority": 2,
+      "condition": {
+          "initiatorDomains": [
+              "127.0.0.1",
+              "tmeta.vn"
+          ],
+          "resourceTypes": [
+              "xmlhttprequest"
+          ],
+          "regexFilter": "tmeta_global_scope_id"
+      },
+      "action": {
+          "type": "modifyHeaders",
+          "requestHeaders": [
+              {
+                  "header": "Sec-Fetch-Dest",
+                  "operation": "set",
+                  "value": "document"
+              },
+              {
+                  "header": "Sec-Fetch-Mode",
+                  "operation": "set",
+                  "value": "same-origin"
+              },
+              {
+                  "header": "Sec-Fetch-Site",
+                  "operation": "set",
+                  "value": "none"
+              },
+              {
+                  "header": "Tmetar-2-200",
+                  "operation": "set",
+                  "value": "tmeta_global_scope_id"
+              }
+          ]
+      }
+  },
+  {
+      "id": 201,
+      "priority": 2,
+      "condition": {
+          "initiatorDomains": [
+              "127.0.0.1",
+              "tmeta.vn"
+          ],
+          "resourceTypes": [
+              "xmlhttprequest"
+          ],
+          "regexFilter": "tmetar_cookie"
+      },
+      "action": {
+          "type": "modifyHeaders",
+          "requestHeaders": [
+              {
+                  "header": "Cookie",
+                  "operation": "remove"
+              },
+              {
+                  "header": "Tmetar-2-201",
+                  "operation": "set",
+                  "value": "tmetar_cookie"
+              }
+          ]
+      }
+  },
+  {
+      "id": 202,
+      "priority": 2,
+      "condition": {
+          "initiatorDomains": [
+              "127.0.0.1",
+              "tmeta.vn"
+          ],
+          "resourceTypes": [
+              "xmlhttprequest"
+          ],
+          "regexFilter": "tmetaf_urlencoded"
+      },
+      "action": {
+          "type": "modifyHeaders",
+          "requestHeaders": [
+              {
+                  "header": "Content-Type",
+                  "operation": "set",
+                  "value": "application/x-www-form-urlencoded"
+              },
+              {
+                  "header": "Tmetar-2-202",
+                  "operation": "set",
+                  "value": "tmetaf_urlencoded"
+              }
+          ]
+      }
+  },
+  {
+      "id": 203,
+      "priority": 2,
+      "condition": {
+          "initiatorDomains": [
+              "127.0.0.1",
+              "tmeta.vn"
+          ],
+          "resourceTypes": [
+              "xmlhttprequest"
+          ],
+          "regexFilter": "tmetas_origin_all"
+      },
+      "action": {
+          "type": "modifyHeaders",
+          "requestHeaders": [
+              {
+                  "header": "Tmetar-2-203",
+                  "operation": "set",
+                  "value": "tmetas_origin_all"
+              }
+          ],
+          "responseHeaders": [
+              {
+                  "header": "Access-Control-Allow-Origin",
+                  "operation": "set",
+                  "value": "*"
+              }
+          ]
+      }
+  },
+  {
+      "id": 204,
+      "priority": 2,
+      "condition": {
+          "initiatorDomains": [
+              "127.0.0.1",
+              "tmeta.vn"
+          ],
+          "resourceTypes": [
+              "xmlhttprequest"
+          ],
+          "regexFilter": "tmeta_kill_agent"
+      },
+      "action": {
+          "type": "modifyHeaders",
+          "requestHeaders": [
+              {
+                  "header": "User-Agent",
+                  "operation": "set",
+                  "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.61 Safari/537.36"
+              },
+              {
+                  "header": "Tmetar-2-204",
+                  "operation": "set",
+                  "value": "tmeta_kill_agent"
+              }
+          ]
+      }
+  },
+  {
+      "id": 205,
+      "priority": 2,
+      "condition": {
+          "initiatorDomains": [
+              "127.0.0.1",
+              "tmeta.vn"
+          ],
+          "resourceTypes": [
+              "xmlhttprequest"
+          ],
+          "regexFilter": "tmetar_origin"
+      },
+      "action": {
+          "type": "modifyHeaders",
+          "requestHeaders": [
+              {
+                  "header": "Origin",
+                  "operation": "remove"
+              },
+              {
+                  "header": "Tmetar-2-205",
+                  "operation": "set",
+                  "value": "tmetar_origin"
+              }
+          ]
+      }
+  },
+  {
+      "id": 206,
+      "priority": 2,
+      "condition": {
+          "initiatorDomains": [
+              "127.0.0.1",
+              "tmeta.vn"
+          ],
+          "resourceTypes": [
+              "xmlhttprequest"
+          ],
+          "regexFilter": "tmetar_referer"
+      },
+      "action": {
+          "type": "modifyHeaders",
+          "requestHeaders": [
+              {
+                  "header": "Referer",
+                  "operation": "remove"
+              },
+              {
+                  "header": "Tmetar-2-206",
+                  "operation": "set",
+                  "value": "tmetar_referer"
+              }
+          ]
+      }
+  },
+  {
+      "id": 207,
+      "priority": 1,
+      "condition": {
+          "initiatorDomains": [
+              "127.0.0.1",
+              "tmeta.vn"
+          ],
+          "resourceTypes": [
+              "xmlhttprequest"
+          ],
+          "regexFilter": "tmetas_org_rp2p1"
+      },
+      "action": {
+          "type": "modifyHeaders",
+          "requestHeaders": [
+              {
+                  "header": "Tmetar-1-207",
+                  "operation": "set",
+                  "value": "tmetas_org_rp2p1"
+              }
+          ],
+          "responseHeaders": [
+              {
+                  "header": "Access-Control-Allow-Origin",
+                  "operation": "set",
+                  "value": "https://business.facebook.com"
+              }
+          ]
+      }
+  },
+  {
+      "id": 208,
+      "priority": 1,
+      "condition": {
+          "initiatorDomains": [
+              "127.0.0.1",
+              "tmeta.vn"
+          ],
+          "resourceTypes": [
+              "xmlhttprequest"
+          ],
+          "regexFilter": "tmetas_org_rp3p1"
+      },
+      "action": {
+          "type": "modifyHeaders",
+          "requestHeaders": [
+              {
+                  "header": "Tmetar-1-208",
+                  "operation": "set",
+                  "value": "tmetas_org_rp3p1"
+              }
+          ],
+          "responseHeaders": [
+              {
+                  "header": "Access-Control-Allow-Origin",
+                  "operation": "set",
+                  "value": "https://www.facebook.com"
+              }
+          ]
+      }
+  },
+  {
+      "id": 209,
+      "priority": 1,
+      "condition": {
+          "initiatorDomains": [
+              "127.0.0.1",
+              "tmeta.vn"
+          ],
+          "resourceTypes": [
+              "xmlhttprequest"
+          ],
+          "regexFilter": "tmetas_org_rp4p1"
+      },
+      "action": {
+          "type": "modifyHeaders",
+          "requestHeaders": [
+              {
+                  "header": "Tmetar-1-209",
+                  "operation": "set",
+                  "value": "tmetas_org_rp4p1"
+              }
+          ],
+          "responseHeaders": [
+              {
+                  "header": "Access-Control-Allow-Origin",
+                  "operation": "set",
+                  "value": "https://m.facebook.com"
+              }
+          ]
+      }
+  },
+  {
+      "id": 210,
+      "priority": 1,
+      "condition": {
+          "initiatorDomains": [
+              "127.0.0.1",
+              "tmeta.vn"
+          ],
+          "resourceTypes": [
+              "xmlhttprequest"
+          ],
+          "regexFilter": "tmetas_org_rp5p1"
+      },
+      "action": {
+          "type": "modifyHeaders",
+          "requestHeaders": [
+              {
+                  "header": "Tmetar-1-210",
+                  "operation": "set",
+                  "value": "tmetas_org_rp5p1"
+              }
+          ],
+          "responseHeaders": [
+              {
+                  "header": "Access-Control-Allow-Origin",
+                  "operation": "set",
+                  "value": "https://graph.facebook.com"
+              }
+          ]
+      }
+  },
+  {
+      "id": 211,
+      "priority": 1,
+      "condition": {
+          "initiatorDomains": [
+              "127.0.0.1",
+              "tmeta.vn"
+          ],
+          "resourceTypes": [
+              "xmlhttprequest"
+          ],
+          "regexFilter": "tmetas_org_rp1p1"
+      },
+      "action": {
+          "type": "modifyHeaders",
+          "requestHeaders": [
+              {
+                  "header": "Tmetar-1-211-org",
+                  "operation": "set",
+                  "value": "http://127.0.0.1:5173"
+              }
+          ],
+          "responseHeaders": [
+              {
+                  "header": "Access-Control-Allow-Origin",
+                  "operation": "set",
+                  "value": "http://127.0.0.1:5173"
+              }
+          ]
+      }
+  },
+  {
+      "id": 212,
+      "priority": 1,
+      "condition": {
+          "initiatorDomains": [
+              "127.0.0.1",
+              "tmeta.vn"
+          ],
+          "resourceTypes": [
+              "xmlhttprequest"
+          ],
+          "regexFilter": "tmetas_org_rp6p1"
+      },
+      "action": {
+          "type": "modifyHeaders",
+          "requestHeaders": [
+              {
+                  "header": "Tmetar-1-212-org",
+                  "operation": "set",
+                  "value": "https://tmeta.vn"
+              }
+          ],
+          "responseHeaders": [
+              {
+                  "header": "Access-Control-Allow-Origin",
+                  "operation": "set",
+                  "value": "https://tmeta.vn"
+              }
+          ]
+      }
+  }
+]
